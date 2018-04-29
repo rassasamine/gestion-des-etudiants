@@ -1,0 +1,10 @@
+c:\users\emine 'hussoka' rass\documents\visual studio 2017\Projects\WindowsApp2\WindowsApp2\obj\Debug\WindowsApp2.vbproj.GenerateResource.Cache
+C:\Users\Emine 'HusSoka' Rass\documents\visual studio 2017\Projects\WindowsApp2\WindowsApp2\bin\Debug\Gestion_Etudiant.exe.config
+C:\Users\Emine 'HusSoka' Rass\documents\visual studio 2017\Projects\WindowsApp2\WindowsApp2\bin\Debug\Gestion_Etudiant.exe
+C:\Users\Emine 'HusSoka' Rass\documents\visual studio 2017\Projects\WindowsApp2\WindowsApp2\bin\Debug\Gestion_Etudiant.pdb
+C:\Users\Emine 'HusSoka' Rass\documents\visual studio 2017\Projects\WindowsApp2\WindowsApp2\bin\Debug\Gestion_Etudiant.xml
+C:\Users\Emine 'HusSoka' Rass\documents\visual studio 2017\Projects\WindowsApp2\WindowsApp2\obj\Debug\Gestion_Etudiant.Form1.resources
+C:\Users\Emine 'HusSoka' Rass\documents\visual studio 2017\Projects\WindowsApp2\WindowsApp2\obj\Debug\Gestion_Etudiant.Resources.resources
+C:\Users\Emine 'HusSoka' Rass\documents\visual studio 2017\Projects\WindowsApp2\WindowsApp2\obj\Debug\Gestion_Etudiant.exe
+C:\Users\Emine 'HusSoka' Rass\documents\visual studio 2017\Projects\WindowsApp2\WindowsApp2\obj\Debug\Gestion_Etudiant.xml
+C:\Users\Emine 'HusSoka' Rass\documents\visual studio 2017\Projects\WindowsApp2\WindowsApp2\obj\Debug\Gestion_Etudiant.pdb
