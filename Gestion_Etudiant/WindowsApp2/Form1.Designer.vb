@@ -35,32 +35,33 @@ Partial Class Form1
         Me.btnModifier = New System.Windows.Forms.Button()
         Me.btnRechercher = New System.Windows.Forms.Button()
         Me.cmbNom = New System.Windows.Forms.ComboBox()
+        Me.lblListe = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtNom
         '
-        Me.txtNom.Location = New System.Drawing.Point(125, 85)
+        Me.txtNom.Location = New System.Drawing.Point(131, 87)
         Me.txtNom.Name = "txtNom"
         Me.txtNom.Size = New System.Drawing.Size(140, 20)
         Me.txtNom.TabIndex = 0
         '
         'txtPrenom
         '
-        Me.txtPrenom.Location = New System.Drawing.Point(125, 134)
+        Me.txtPrenom.Location = New System.Drawing.Point(131, 136)
         Me.txtPrenom.Name = "txtPrenom"
         Me.txtPrenom.Size = New System.Drawing.Size(140, 20)
         Me.txtPrenom.TabIndex = 1
         '
         'txtCode
         '
-        Me.txtCode.Location = New System.Drawing.Point(125, 41)
+        Me.txtCode.Location = New System.Drawing.Point(131, 43)
         Me.txtCode.Name = "txtCode"
         Me.txtCode.Size = New System.Drawing.Size(140, 20)
         Me.txtCode.TabIndex = 3
         '
         'txtAdresse
         '
-        Me.txtAdresse.Location = New System.Drawing.Point(125, 182)
+        Me.txtAdresse.Location = New System.Drawing.Point(131, 184)
         Me.txtAdresse.Name = "txtAdresse"
         Me.txtAdresse.Size = New System.Drawing.Size(140, 20)
         Me.txtAdresse.TabIndex = 2
@@ -68,42 +69,46 @@ Partial Class Form1
         'lblCode
         '
         Me.lblCode.AutoSize = True
-        Me.lblCode.Location = New System.Drawing.Point(23, 44)
+        Me.lblCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCode.Location = New System.Drawing.Point(18, 46)
         Me.lblCode.Name = "lblCode"
-        Me.lblCode.Size = New System.Drawing.Size(74, 13)
+        Me.lblCode.Size = New System.Drawing.Size(105, 17)
         Me.lblCode.TabIndex = 4
-        Me.lblCode.Text = "&Code Etudiant"
+        Me.lblCode.Text = "&Code Etudiant :"
         '
         'lblNom
         '
         Me.lblNom.AutoSize = True
-        Me.lblNom.Location = New System.Drawing.Point(23, 92)
+        Me.lblNom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNom.Location = New System.Drawing.Point(18, 90)
         Me.lblNom.Name = "lblNom"
-        Me.lblNom.Size = New System.Drawing.Size(29, 13)
+        Me.lblNom.Size = New System.Drawing.Size(45, 17)
         Me.lblNom.TabIndex = 5
-        Me.lblNom.Text = "&Nom"
+        Me.lblNom.Text = "&Nom :"
         '
         'lblPrenom
         '
         Me.lblPrenom.AutoSize = True
-        Me.lblPrenom.Location = New System.Drawing.Point(23, 141)
+        Me.lblPrenom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrenom.Location = New System.Drawing.Point(18, 140)
         Me.lblPrenom.Name = "lblPrenom"
-        Me.lblPrenom.Size = New System.Drawing.Size(43, 13)
+        Me.lblPrenom.Size = New System.Drawing.Size(65, 17)
         Me.lblPrenom.TabIndex = 6
-        Me.lblPrenom.Text = "&Prenom"
+        Me.lblPrenom.Text = "&Prenom :"
         '
         'lblAdresse
         '
         Me.lblAdresse.AutoSize = True
-        Me.lblAdresse.Location = New System.Drawing.Point(23, 189)
+        Me.lblAdresse.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAdresse.Location = New System.Drawing.Point(18, 187)
         Me.lblAdresse.Name = "lblAdresse"
-        Me.lblAdresse.Size = New System.Drawing.Size(45, 13)
+        Me.lblAdresse.Size = New System.Drawing.Size(68, 17)
         Me.lblAdresse.TabIndex = 7
-        Me.lblAdresse.Text = "&Adresse"
+        Me.lblAdresse.Text = "&Adresse :"
         '
         'btnAjouter
         '
-        Me.btnAjouter.Location = New System.Drawing.Point(290, 34)
+        Me.btnAjouter.Location = New System.Drawing.Point(296, 40)
         Me.btnAjouter.Name = "btnAjouter"
         Me.btnAjouter.Size = New System.Drawing.Size(75, 23)
         Me.btnAjouter.TabIndex = 8
@@ -112,7 +117,7 @@ Partial Class Form1
         '
         'btnSupprimer
         '
-        Me.btnSupprimer.Location = New System.Drawing.Point(290, 82)
+        Me.btnSupprimer.Location = New System.Drawing.Point(296, 87)
         Me.btnSupprimer.Name = "btnSupprimer"
         Me.btnSupprimer.Size = New System.Drawing.Size(75, 23)
         Me.btnSupprimer.TabIndex = 9
@@ -121,7 +126,7 @@ Partial Class Form1
         '
         'btnModifier
         '
-        Me.btnModifier.Location = New System.Drawing.Point(290, 131)
+        Me.btnModifier.Location = New System.Drawing.Point(296, 137)
         Me.btnModifier.Name = "btnModifier"
         Me.btnModifier.Size = New System.Drawing.Size(75, 23)
         Me.btnModifier.TabIndex = 10
@@ -130,7 +135,7 @@ Partial Class Form1
         '
         'btnRechercher
         '
-        Me.btnRechercher.Location = New System.Drawing.Point(290, 179)
+        Me.btnRechercher.Location = New System.Drawing.Point(296, 184)
         Me.btnRechercher.Name = "btnRechercher"
         Me.btnRechercher.Size = New System.Drawing.Size(75, 23)
         Me.btnRechercher.TabIndex = 11
@@ -140,16 +145,27 @@ Partial Class Form1
         'cmbNom
         '
         Me.cmbNom.FormattingEnabled = True
-        Me.cmbNom.Location = New System.Drawing.Point(533, 34)
+        Me.cmbNom.Location = New System.Drawing.Point(458, 151)
         Me.cmbNom.Name = "cmbNom"
-        Me.cmbNom.Size = New System.Drawing.Size(121, 21)
+        Me.cmbNom.Size = New System.Drawing.Size(122, 21)
         Me.cmbNom.TabIndex = 12
+        '
+        'lblListe
+        '
+        Me.lblListe.AutoSize = True
+        Me.lblListe.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblListe.Location = New System.Drawing.Point(399, 109)
+        Me.lblListe.Name = "lblListe"
+        Me.lblListe.Size = New System.Drawing.Size(252, 26)
+        Me.lblListe.TabIndex = 13
+        Me.lblListe.Text = "Liste total des etudiants :"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(781, 261)
+        Me.ClientSize = New System.Drawing.Size(663, 251)
+        Me.Controls.Add(Me.lblListe)
         Me.Controls.Add(Me.cmbNom)
         Me.Controls.Add(Me.btnRechercher)
         Me.Controls.Add(Me.btnModifier)
@@ -164,7 +180,7 @@ Partial Class Form1
         Me.Controls.Add(Me.txtPrenom)
         Me.Controls.Add(Me.txtNom)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Gestion_Etudiants"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -183,4 +199,5 @@ Partial Class Form1
     Friend WithEvents btnModifier As Button
     Friend WithEvents btnRechercher As Button
     Friend WithEvents cmbNom As ComboBox
+    Friend WithEvents lblListe As Label
 End Class

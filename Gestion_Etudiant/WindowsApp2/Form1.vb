@@ -3,58 +3,37 @@
 Public Class Form1
     Dim connexion As OleDbConnection
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'Etablir la connexion avec la base de donnée
         Dim ConnexionString As String
         ConnexionString = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source= C:\Users\Emine 'HusSoka' Rass\Documents\Visual Studio 2017\Projects\Gestion_Etudiant\WindowsApp2\Database1.mdb"
         connexion = New OleDbConnection(ConnexionString)
         connexion.Open()
 
+        'requete de selection
         Dim reqAffiche As String
         reqAffiche = "SELECT prenom FROM personne"
+
+        'Executer la requete
         Dim cmd As OleDbCommand
         cmd = New OleDbCommand(reqAffiche, connexion)
 
+        'recuperer le resultat de la requete
         Dim reader As OleDbDataReader = cmd.ExecuteReader()
+
+        'manipuler le resultat de la requete
         While reader.Read()
             cmbNom.Items.Add(reader.Item(0))
         End While
     End Sub
 
-    Private Sub lblCode_Click(sender As Object, e As EventArgs) Handles lblCode.Click
-
-    End Sub
-
-    Private Sub txtCode_TextChanged(sender As Object, e As EventArgs) Handles txtCode.TextChanged
-
-    End Sub
-
-    Private Sub lblNom_Click(sender As Object, e As EventArgs) Handles lblNom.Click
-
-    End Sub
-
-    Private Sub txtNom_TextChanged(sender As Object, e As EventArgs) Handles txtNom.TextChanged
-
-    End Sub
-
-    Private Sub lblPrenom_Click(sender As Object, e As EventArgs) Handles lblPrenom.Click
-
-    End Sub
-
-    Private Sub txtPrenom_TextChanged(sender As Object, e As EventArgs) Handles txtPrenom.TextChanged
-
-    End Sub
-
-    Private Sub lblAdresse_Click(sender As Object, e As EventArgs) Handles lblAdresse.Click
-
-    End Sub
-
-    Private Sub txtAdresse_TextChanged(sender As Object, e As EventArgs) Handles txtAdresse.TextChanged
-
-    End Sub
-
     Private Sub btnAjouter_Click(sender As Object, e As EventArgs) Handles btnAjouter.Click
         If (txtCode.Text <> "" And txtNom.Text <> "" And txtPrenom.Text <> "" And txtAdresse.Text <> "") Then
+            'requete d'insertion
             Dim req As String
             req = "INSERT INTO personne (code,nom,prenom,adresse) VALUES(" & Val(txtCode.Text) & ", '" & txtNom.Text & "','" & txtPrenom.Text & "','" & txtAdresse.Text & "')"
+
+            'Executer la requete
             Dim cmd As OleDbCommand
             cmd = New OleDbCommand(req, connexion)
             cmd.ExecuteNonQuery()
@@ -72,7 +51,12 @@ Public Class Form1
 
     Private Sub btnSupprimer_Click(sender As Object, e As EventArgs) Handles btnSupprimer.Click
         If (txtCode.Text <> "" And txtNom.Text <> "" And txtPrenom.Text <> "" And txtAdresse.Text <> "") Then
-            Dim deleteStr As String = "DELETE * FROM personne WHERE personne.code = " & Val(txtCode.Text) & ""
+
+            'requete de suppression
+            Dim deleteStr As String
+            deleteStr = "DELETE * FROM personne WHERE personne.code = " & Val(txtCode.Text) & ""
+
+            'Executer la requete
             Dim deleteCMD As OleDbCommand
             deleteCMD = New OleDbCommand(deleteStr, connexion)
             deleteCMD.ExecuteNonQuery()
@@ -90,11 +74,18 @@ Public Class Form1
 
     Private Sub btnModifier_Click(sender As Object, e As EventArgs) Handles btnModifier.Click
         If (txtCode.Text <> "" And txtNom.Text <> "" And txtPrenom.Text <> "" And txtAdresse.Text <> "") Then
-            Dim updateStr As String = "UPDATE personne SET nom='" & txtNom.Text & "', prenom='" & txtPrenom.Text & "', adresse='" & txtAdresse.Text & "' WHERE personne.code = " & Val(txtCode.Text) & ""
+
+            'requete de mise à jour
+            Dim updateStr As String
+            updateStr = "UPDATE personne SET nom='" & txtNom.Text & "', prenom='" & txtPrenom.Text & "', adresse='" & txtAdresse.Text & "' WHERE personne.code = " & Val(txtCode.Text) & ""
+
+            'Executer la requete
             Dim updateCMD As OleDbCommand
             updateCMD = New OleDbCommand(updateStr, connexion)
             updateCMD.ExecuteNonQuery()
+
             MsgBox("Modification avec succès !")
+
             txtCode.Clear()
             txtNom.Clear()
             txtPrenom.Clear()
@@ -106,11 +97,18 @@ Public Class Form1
 
     Private Sub btnRechercher_Click(sender As Object, e As EventArgs) Handles btnRechercher.Click
         If (txtCode.Text <> "") Then
+
+            'requete de selection
             Dim req As String
             req = "SELECT * FROM personne WHERE personne.code = " & Val(txtCode.Text) & ""
+
+            'Executer la requete
             Dim Cmd As OleDbCommand
             Cmd = New OleDbCommand(req, connexion)
+
+            'recuperer le resultat de la requete
             Dim Reader As OleDbDataReader = Cmd.ExecuteReader()
+            'manipuler le resultat de la requete
             If Reader.HasRows Then
                 While Reader.Read()
                     txtCode.Text = (Reader.Item(0)).ToString()
